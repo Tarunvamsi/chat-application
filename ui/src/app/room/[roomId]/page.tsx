@@ -11,7 +11,7 @@ export default function Room({ params }: { params: { roomId: string } }) {
     const [activeUsers, setActiveUsers] = useState<string[]>([]);
     const [message, setMessage] = useState('');
     const { sendMessage, lastMessage, readyState } = useWebSocket(
-        `ws://${process.env.WS_IP}:9000`
+        `ws://${process.env.NEXT_PUBLIC_WS_IP}:9000`
     );
 
     useEffect(() => {

@@ -1,3 +1,3 @@
 #!/bin/bash
 IP=$(curl -s ifconfig.me)
-echo "WS_IP=$IP" > .env
+echo "NEXT_PUBLIC_WS_IP=$IP" > .env
