@@ -4,13 +4,14 @@ import { useEffect, useState } from 'react';
 import useWebSocket from 'react-use-websocket';
 import './styles.css';
 import { Button } from '../../../../components/Button';
+import { execSync} from "child_process";
 
 export default function Room({ params }: { params: { roomId: string } }) {
     const [messageHistory, setMessageHistory] = useState<string[]>([]);
     const [activeUsers, setActiveUsers] = useState<string[]>([]);
     const [message, setMessage] = useState('');
     const { sendMessage, lastMessage, readyState } = useWebSocket(
-        'ws://localhost:9000'
+        `ws://${execSync('curl -s ifconfig.me')}:9000`
     );
 
     useEffect(() => {
