@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "updateip":"bash script.sh",
-    "dev": "next dev",
+    "dev": "bash script.sh && next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "bash script.sh && next start",
     "lint": "next lint"
   },
   "dependencies": {
