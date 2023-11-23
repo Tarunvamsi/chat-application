@@ -5,7 +5,7 @@
   "scripts": {
     "updateip":"bash script.sh",
     "dev": "bash script.sh && next dev",
-    "build": "next build",
+    "build": "bash script.sh && next build",
     "start": "bash script.sh && next start",
     "lint": "next lint"
   },

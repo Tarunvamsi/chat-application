@@ -23,7 +23,7 @@ export default function Home() {
             ></input>
             <div className="w-[180px]">
                 <Button
-                    content={<Link href={`/room/${roomId}`}>Back to home</Link>}
+                    content={<Link href={`/room/${roomId}`}>Join room</Link>}
                     handleClick={() => {}}
                 />
             </div>
